@@ -1,31 +1,30 @@
 # Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: hk-vk # Your GitHub organization or username, where this repository lives
+repo: server-monitoring # The name of this repository
+
+# Set custom schedule for the workflow (default: every 5 minutes)
+workflowSchedule:
+  graphs: "0 0 * * *"           # Daily at midnight
+  responseTime: "0 23 * * *"    # Daily at 11 PM
+  staticSite: "0 1 * * *"       # Daily at 1 AM
+  summary: "0 0 * * *"          # Daily at midnight
+  updateTemplate: "0 0 * * *"   # Daily at midnight
+  updates: "*/20 * * * *"       # Every 20 minutes
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  - name: Koyeb App
+    url: https://administrative-prissie-hari3048-b8cb2af3.koyeb.app/
+    maxResponseTime: 5000       # Maximum response time before marking as degraded (ms)
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
+  # cname: demo.upptime.js.org
+  baseUrl: /server-monitoring
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: Koyeb App Status
+  introTitle: "**Koyeb App Status** is a real-time status page for my server."
+  introMessage: This page provides uptime monitoring and status information for my Koyeb application.
   navbar:
     - title: Status
       href: /
@@ -34,3 +33,61 @@ status-website:
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
+
+# Enable issue creation for downtime
+i18n:
+  activeIncidents: Active Incidents
+  allSystemsOperational: All systems are operational
+  incidentReport: "Incident #$NUMBER report →"
+  activeIncidentSummary: Opened at $DATE with $POSTS posts
+  incidentTitle: Incident $NUMBER Details
+  incidentDetails: Incident Details
+  incidentFixed: Fixed
+  incidentOngoing: Ongoing
+  incidentOpenedAt: Opened at
+  incidentClosedAt: Closed at
+  incidentViewOnGitHub: View and Subscribe on GitHub
+  incidentCommentSummary: Posted at $DATE by $AUTHOR
+  incidentBack: ← Back to all incidents
+  pastIncidents: Past Incidents
+  pastIncidentsResolved: Past incidents resolved in $DURATION minute(s)
+  liveStatus: Live Status
+  overallUptime: "Overall uptime: $UPTIME"
+  overallUptimeTitle: Overall uptime
+  averageResponseTime: "Average response time: $TIMEms"
+  averageResponseTimeTitle: Average response
+  sevelDayResponseTime: 7-day response time
+  responseTimeDay: 24-hour response time
+  responseTimeWeek: 7-day response time
+  responseTimeMonth: 30-day response time
+  responseTimeYear: 1-year response time
+  uptime: "Uptime: $UPTIME"
+  uptimeDay: 24-hour uptime
+  uptimeWeek: 7-day uptime
+  uptimeMonth: 30-day uptime
+  uptimeYear: 1-year uptime
+  responseTime: Response time
+  ms: ms
+  loading: Loading
+  navGitHub: GitHub
+  footer: This page is [open source]($REPO), powered by [Upptime](https://upptime.js.org)
+  rateLimitExceeded: Rate limit exceeded
+  rateLimitedUntil: You are rate limited until $DATE
+  errorTitle: An error occurred
+  errorIntro: An error occurred trying to show the latest status
+  errorText: Try again in a few moments
+  errorHome: Go to the homepage
+  pastScheduledMaintenance: Past Scheduled Maintenance
+  scheduledMaintenance: Scheduled Maintenance
+  scheduledMaintenanceSummaryStarted: Started at $DATE for $DURATION minute(s)
+  scheduledMaintenanceSummaryStarts: Starts at $DATE for $DURATION minute(s)
+  startedAt: Started at
+  startsAt: Starts at
+  duration: Duration
+  durationMin: $DURATION minute(s)
+  incidentCompleted: Completed
+  incidentScheduled: Scheduled
+
+# Assign issues for downtime to owner
+assignees:
+  - hk-vk
