@@ -4,7 +4,7 @@
     "url": "https://administrative-prissie-hari3048-b8cb2af3.koyeb.app/",
     "icon": "https://icons.duckduckgo.com/ip3/administrative-prissie-hari3048-b8cb2af3.koyeb.app.ico",
     "slug": "koyeb-app",
-    "status": "degraded",
+    "status": "down",
     "uptime": "15.85%",
     "uptimeDay": "0.00%",
     "uptimeWeek": "0.00%",
@@ -16,7 +16,7 @@
     "timeMonth": 2325,
     "timeYear": 1132,
     "dailyMinutesDown": {
-      "2025-08-26": 274,
+      "2025-08-26": 301,
       "2025-08-25": 1440,
       "2025-08-24": 1440,
       "2025-08-23": 1440,
