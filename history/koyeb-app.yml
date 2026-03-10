@@ -1,7 +1,7 @@
 url: https://administrative-prissie-hari3048-b8cb2af3.koyeb.app/
-status: up
-code: 200
-responseTime: 620
-lastUpdated: 2026-03-09T23:28:02.539Z
+status: degraded
+code: 503
+responseTime: 13558
+lastUpdated: 2026-03-10T02:22:53.174Z
 startTime: 2025-04-07T09:59:02.827Z
 generator: Upptime <https://github.com/upptime/upptime>
